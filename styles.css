@@ -4,8 +4,8 @@
 body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 
@@ -27,6 +27,10 @@ body{
 
 
 @media screen and (max-width: 750px) {
+
+    body{
+        background-color: rgb(237,203,53,255);
+    }
 
     header{
         display: flex;
@@ -76,6 +80,12 @@ body{
         left: 20px;
     
     }
+
+    .sokebar{
+        display: none;
+    }
+
+
 
     #nav-toggle{
         position: absolute;
@@ -164,12 +174,19 @@ body{
     }
 
     .sec3{
-        background-color: rgba(255, 169, 57, 0);
+        background-color: rgb(255, 255, 255);
+        padding-top: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
     }
+    .divs3{
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+    }
+
     .sec4{
         background-color: rgb(255, 255, 255);
         display: flex;
@@ -206,10 +223,10 @@ body{
         justify-content: space-around;
         flex-direction: column;
         padding: 20px;
-        padding-top: 25px;
-        padding-bottom: 35px;
+        padding: 50px;
         font-size: 0.9em;
         font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
     }
     .button_black{
         background-color: rgb(39, 39, 39);
@@ -240,6 +257,9 @@ body{
         text-align: center;
         color: #ffffff;
         font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+        padding-bottom: 50px;
     }
 
     .sec8{
@@ -251,11 +271,13 @@ body{
         flex-direction: column;
         padding: 13px;
         padding-top: 25px;
-        padding-bottom: 35px;
+        padding-bottom: 50px;
         font-size: 1em;
         text-align: center;
         color: #000000;
         font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
     }
 
     .sec9{
@@ -266,10 +288,10 @@ body{
         justify-content: space-around;
         flex-direction: column;
         padding: 10px;
-        padding-top: 20px;
-        padding-bottom: 30px;
         font-size: 1em;
         font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
     }
     .luft > li{
         list-style-type: disc;
@@ -298,6 +320,7 @@ body{
     align-items: center;
     justify-content: center;
     color:#ffffff;
+    clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
 
     }
 
@@ -324,5 +347,374 @@ body{
         align-items: center;
         justify-content: center;
     }
+
+}
+
+@media screen and (min-width: 750px) {
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 55px;
+        background-color: white;
+    }
+
+
+
+
+    .menu{
+        grid-area: menu;
+    }
+    .menu2{
+        grid-area: menu2;
+    }
+    .menu3{
+        grid-area: menu3;
+    }
+    .menu4{
+        grid-area: menu4;
+    }
+    .menu5{
+        grid-area: menu5;
+    }
+    .menu6{
+        grid-area: menu6;
+    }
+    .menu7{
+        grid-area: menu7;
+    }
+    .menu8{
+        grid-area: menu8;
+    }
+    h2{
+        padding-left: 12px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 500;
+        font-size: large;
+    }
+
+    .sokebar{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    gap: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    }
+
+    .sokebar input{
+        outline: none;
+        border: none;
+        font-size: 0.8;
+        scale: 1.1;
+    }
+
+
+    .sokebar-mobile{
+        display: none;
+    }
+
+    .sokeicon{
+        display: none;
+    }
+    
+    .arrowpil{
+        height: 24px;
+        position: absolute;
+        left: 20px;
+    
+    }
+
+    #nav-toggle{
+        position: absolute;
+        top: 16.4px;
+        right: 2.6px;
+        scale: 1.9;
+        opacity: 0%;
+    }
+    
+    .del1{
+        height: 800px;
+        transition: 400ms ease-in-out;
+        transform: translateX(110vw);
+        position: absolute;
+        background-color: #ffffff;
+        width: 15%;
+        size: 1.1;
+        top: 7%;
+        right: 83.5%;
+    
+    }
+    #nav-toggle:checked + .del1{
+        transform: translateX(75vw);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 800px;
+        scale: 1.1;
+        width: 15%;
+        font-family: 'Nunito', sans-serif;
+        font-size: 90%;
+        position: absolute;
+        background-color: #ffffff;
+        top: 9%;
+        right: 83.5%;
+    
+    }
+
+    
+    li{
+        list-style-type: none;
+    }
+
+    ul{
+        width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    
+    }
+    .border{
+        height: 1px;
+        width: 100%;
+        background-color: gray;
+        opacity: 12%;
+    }
+    
+    .hero{
+        height: 800px;
+        background-image: url(hero-02.jpg);
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:#ffffff;
+        background-size: cover;
+    
+        
+
+    }
+    .hero > p{
+        font-family: 'Nunito', sans-serif;
+        font-size: 0.9em;
+        padding-bottom: 20px;
+    }
+    .h1_hero{
+        text-align: center;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2px;
+        padding-top: 10px;
+        
+        color: #000000;
+        text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.1), 1px 1px 1px rgb(0, 0, 0);
+        color: #ffffff;
+    }
+
+    .button{
+        background-color: #7bc144;
+        color: white;
+        border-radius: 5px;
+        padding: 0.6em 2.5em;
+        font-size: 1em;
+        font-family: 'Nunito', sans-serif;
+        display: inline-block;
+    }
+
+    .sec3{
+        background-color: rgba(255, 169, 57, 0);
+        height: 50px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+        padding-top: 50px;
+    }
+    .sec4{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+
+
+    }
+
+    .sec5_2{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .sec5_3{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .article1{
+        background-color: rgb(237,203,53,255);
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 20px;
+        padding-top: 25px;
+        padding-bottom: 35px;
+        font-size: 0.9em;
+        font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+    }
+    .button_black{
+        background-color: rgb(39, 39, 39);
+        color: white;
+        border-radius: 5px;
+        padding: 0.6em 2.5em;
+        font-size: 1em;
+        font-family: 'Nunito', sans-serif;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+    .luft{
+        padding: 10px;
+    }
+
+
+    .sec7{
+        background-color: rgba(123,193,68,255);
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 13px;
+        padding-top: 25px;
+        padding-bottom: 35px;
+        font-size: 1em;
+        text-align: center;
+        color: #ffffff;
+        font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+    }
+
+    .sec8{
+        background-color: white;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 13px;
+        padding-top: 25px;
+        padding-bottom: 35px;
+        font-size: 1em;
+        text-align: center;
+        color: #000000;
+        font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+    }
+
+    .sec9{
+        background-color: rgb(237,203,53,255);
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        font-size: 1em;
+        font-family: 'Nunito', sans-serif;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -50px;
+    }
+    .luft > li{
+        list-style-type: disc;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+
+    .luft > p{
+        font-size: 0.9em;
+    }
+
+    .luft_50{
+        height: 50px;
+    }
+
+    .luft_20{
+        height: 15px;
+    }
+
+    .sec10{
+    height: 300px;
+    background-image: url(budbil1.jpg);
+    background-position: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#ffffff;
+    clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+    margin-top: -50px;
+
+    }
+
+    .sec10_h1{
+        font-size: 2em;
+        text-shadow: 2px 1px 0 #000000;
+        color: #FFFFFF;
+    }
+
+    footer{
+        background-color: rgb(39, 39, 39);
+        height: 900px;
+        color: white;
+        clip-path: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        margin-top: -80px;
+    }
+
+    .textfooter{
+        padding-left: 500px;
+        padding-top: 30px;
+        
+    }
+
+    .stm{
+        height: 70px;
+        padding: 6px;
+
+    }
+    .k-o-text{
+        display: none;
+    }
+
+    .iconpack{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 
 }
