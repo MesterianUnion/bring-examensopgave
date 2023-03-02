@@ -85,13 +85,13 @@ body{
     }
     
     .del1{
-        transform: translateX(-100vh);
+        transform: translateY(-100vh);
         height: 0px;
         transition: 300ms ease-in-out;
     
     }
     #nav-toggle:checked + .del1{
-        transform: translateX(0vh);
+        transform: translateY(0vh);
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
